@@ -65,6 +65,13 @@ var GraphNode = function (value) {
 
 /*
  * Complexity: What is the time complexity of the above functions?
+ * .addNode() is constant time
+ * .contains() is linear time
+ * .removeNode() is linear time
+ * .hasEdge() is constant time
+ * .addEdge() is constant time
+ * .removeEdge() is constant time
+ * .forEachNode() is linear time
  */
 
 
