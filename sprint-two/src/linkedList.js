@@ -55,4 +55,8 @@ var Node = function(value){
 
 /*
  * Complexity: What is the time complexity of the above functions?
+ *
+ * .addToTail() is constant time
+ * .removeHead() is constant time
+ * .contains() is linear time
  */
