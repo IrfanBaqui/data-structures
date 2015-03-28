@@ -10,10 +10,12 @@ describe('doublyLinkedList', function() {
     expect(doublyLinkedList).to.have.property("tail");
   });
 
-  it('should have methods named "addToTail", "removeHead", and "contains"', function() {
+  it('should have methods named "addToTail", "removeHead", "contains", "removeTail" and "addToHead"', function() {
     expect(doublyLinkedList.addToTail).to.be.a("function");
     expect(doublyLinkedList.removeHead).to.be.a("function");
     expect(doublyLinkedList.contains).to.be.a("function");
+    expect(doublyLinkedList.addToHead).to.be.a("function");
+    expect(doublyLinkedList.removeTail).to.be.a("function");
   });
 
   it('should designate a new tail when new nodes are added', function(){

@@ -40,8 +40,13 @@ var DoublyLinkedList = function(){
     }
     return false;
   };
+  list.addToHead = function() {};
+
+  list.removeTail = function() {};
 
   return list;
+
+
 };
 
 var Node = function(value){
@@ -49,6 +54,7 @@ var Node = function(value){
 
   node.value = value;
   node.next = null;
+  // node.prev = null;
 
   return node;
 };
