@@ -8,7 +8,10 @@ var DoublyLinkedList = function(){
     if ( !list.head ) {
       list.head = node;
     } else {
-      list.tail.next = node;
+      var temp = list.tail;
+      list.tail = node;
+      node.previous = temp;
+      temp.next = node;
     }
 
     list.tail = node;
@@ -54,7 +57,7 @@ var Node = function(value){
 
   node.value = value;
   node.next = null;
-  // node.prev = null;
+  node.previous = null;
 
   return node;
 };
