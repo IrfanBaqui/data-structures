@@ -60,14 +60,21 @@ describe('doublyLinkedList', function() {
     expect(doublyLinkedList.contains(4)).to.equal(false);
   });
 
-
   it('should designate a new head when a new head is added', function(){
     doublyLinkedList.addToTail(4);
     doublyLinkedList.addToHead(5);
     expect(doublyLinkedList.head.value).to.equal(5);
     expect(doublyLinkedList.head.next.value).to.equal(4);
     expect(doublyLinkedList.head.next.previous.value).to.equal(5);
+  });
 
+  it('should remove the tail node and have tail point to the old tail\'s previous node', function(){
+    doublyLinkedList.addToTail(4);
+    doublyLinkedList.addToTail(5);
+    doublyLinkedList.addToTail(6);
+    expect(doublyLinkedList.tail.value).to.equal(6);
+    doublyLinkedList.removeTail();
+    expect(doublyLinkedList.tail.value).to.equal(5);
   });
   // add more tests here to test the functionality of doublyLinkedList
 });
