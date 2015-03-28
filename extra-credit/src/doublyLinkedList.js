@@ -52,11 +52,12 @@ var DoublyLinkedList = function(){
     temp.previous = list.head;
   };
 
-  list.removeTail = function() {};
+  list.removeTail = function() {
+    list.tail = list.tail.previous;
+    list.tail.next = null;
+  };
 
   return list;
-
-
 };
 
 var Node = function(value){
