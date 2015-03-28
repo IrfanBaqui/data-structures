@@ -7,13 +7,12 @@ var Stack = function(){
 
   // Implement the methods below
   someInstance.push = function(value){
-    storage[length] = value;
-    length++;
+    storage[length++] = value;
   };
 
   someInstance.pop = function(){
     var result;
-    if (length > 0){
+    if (length){
       result = storage[--length];
     }
     return result;
