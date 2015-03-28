@@ -25,7 +25,6 @@ describe('doublyLinkedList', function() {
     expect(doublyLinkedList.tail.value).to.equal(5);
   });
 
-
   it('should reference the previous node at the tail node', function(){
     doublyLinkedList.addToTail(3);
     doublyLinkedList.addToTail(4);
@@ -38,6 +37,7 @@ describe('doublyLinkedList', function() {
     expect(doublyLinkedList.head.value).to.equal(4);
     doublyLinkedList.removeHead();
     expect(doublyLinkedList.head.value).to.equal(5);
+    expect(doublyLinkedList.head.previous).to.equal(null);
   });
 
   it("should return the value of the former head when removeHead is called", function(){
