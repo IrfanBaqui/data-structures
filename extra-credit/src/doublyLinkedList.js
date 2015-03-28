@@ -45,7 +45,12 @@ var DoublyLinkedList = function(){
     return false;
   };
 
-  list.addToHead = function() {};
+  list.addToHead = function(value) {
+    var temp = this.head;
+    this.head = Node(value);
+    this.head.next = temp;
+    temp.previous = this.head;
+  };
 
   list.removeTail = function() {};
 
