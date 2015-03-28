@@ -24,6 +24,7 @@ var DoublyLinkedList = function(){
       result = list.head;
       if (list.head.next) {
         list.head = list.head.next;
+        list.head.previous = null;
       } else {
         list.head = null;
         list.tail = null;
@@ -43,6 +44,7 @@ var DoublyLinkedList = function(){
     }
     return false;
   };
+
   list.addToHead = function() {};
 
   list.removeTail = function() {};
